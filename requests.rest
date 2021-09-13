@@ -6,8 +6,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Pedro",
-    "password": "password"
+    "name": "Roberto",
+    "password": "contraseña"
 }
 
 ###
@@ -15,6 +15,6 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "name": "Juan",
-    "password": "passwordsegur"
+    "name": "Roberto",
+    "password": "contraseñ"
 }

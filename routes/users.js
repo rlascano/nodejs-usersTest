@@ -29,13 +29,13 @@ router.post('/login', async (req, res) => {
     try {
         const user = await User.findOne({name: req.body.name})
         if(user == null) {
-            return res.status(400).send("Cannot find user")
+            return res.status(400).send("Usuario no encontrado")
         }  
         const valid = await user.isValidPassword(req.body.password)           
         if(!valid) {            
-            return res.status(400).send("Invalid name or password")
+            return res.status(400).send("Nombre o contraseña no válidos")
         }
-        res.status(201).send("Success")
+        res.status(201).send("Bienvenido al Sistema")
     } catch(err) {
         res.status(500).json({err: err.message})
     }
